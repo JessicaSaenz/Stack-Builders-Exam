@@ -1,0 +1,47 @@
+<p style="text-align:center;margin-top:10px;font-weight: bold;font-size: x-large">Musical lake</p>
+<form style="margin:60px">
+  <div class="row">    
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Select sound</label>
+            <select class="form-control" (change)="onSelect($event.target.value)">
+                <option value="">Select..</option>
+            
+                <option value="brr">brr</option>
+                <option value="birip">birip</option>
+                <option value="brrah">brrah</option>
+                <option value="croac">croac</option>
+            
+                <option value="fiu">fiu</option>
+                <option value="plop">plop</option>
+                <option value="pep">pep</option>
+            
+                <option value="criccric">criccric</option>
+                <option value="trritrri">trritrri</option>
+                <option value="bribri">bribri</option>
+              </select>
+              <br>
+              <button type="button" class="btn btn-primary" (click)="getSong()">Make Song</button>
+              <br>
+              <br>
+              <br>
+              <p *ngIf="silence" style="font-weight: bold;font-size: x-large">Silence...</p>
+              <p style="font-weight: bold;font-size: x-large">{{song}}</p>
+        </div>     
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="animal === 'Criket'">
+        <img src="../../assets/images/criket.jpg">
+      </div>
+      <div *ngIf="animal === 'Dragonfly'">
+        <img src="../../assets/images/dragonfly.jpg">
+      </div>
+      <div *ngIf="animal === 'Frog'">
+        <img src="../../assets/images/frog.jpg">
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
